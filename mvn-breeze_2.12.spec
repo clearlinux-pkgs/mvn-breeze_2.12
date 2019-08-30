@@ -4,7 +4,7 @@
 #
 Name     : mvn-breeze_2.12
 Version  : 0.13.2
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/scalanlp/breeze_2.12/0.13.2/breeze_2.12-0.13.2.jar
 Source0  : https://repo1.maven.org/maven2/org/scalanlp/breeze_2.12/0.13.2/breeze_2.12-0.13.2.jar
 Source1  : https://repo.maven.apache.org/maven2/org/scalanlp/breeze-macros_2.12/0.13.2/breeze-macros_2.12-0.13.2.jar
