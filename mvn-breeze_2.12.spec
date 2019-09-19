@@ -4,12 +4,16 @@
 #
 Name     : mvn-breeze_2.12
 Version  : 0.13.2
-Release  : 2
+Release  : 3
 URL      : https://repo1.maven.org/maven2/org/scalanlp/breeze_2.12/0.13.2/breeze_2.12-0.13.2.jar
 Source0  : https://repo1.maven.org/maven2/org/scalanlp/breeze_2.12/0.13.2/breeze_2.12-0.13.2.jar
 Source1  : https://repo.maven.apache.org/maven2/org/scalanlp/breeze-macros_2.12/0.13.2/breeze-macros_2.12-0.13.2.jar
 Source2  : https://repo.maven.apache.org/maven2/org/scalanlp/breeze-macros_2.12/0.13.2/breeze-macros_2.12-0.13.2.pom
-Source3  : https://repo1.maven.org/maven2/org/scalanlp/breeze_2.12/0.13.2/breeze_2.12-0.13.2.pom
+Source3  : https://repo1.maven.org/maven2/org/scalanlp/breeze-macros_2.12/0.13/breeze-macros_2.12-0.13.jar
+Source4  : https://repo1.maven.org/maven2/org/scalanlp/breeze-macros_2.12/0.13/breeze-macros_2.12-0.13.pom
+Source5  : https://repo1.maven.org/maven2/org/scalanlp/breeze_2.12/0.13.2/breeze_2.12-0.13.2.pom
+Source6  : https://repo1.maven.org/maven2/org/scalanlp/breeze_2.12/0.13/breeze_2.12-0.13.jar
+Source7  : https://repo1.maven.org/maven2/org/scalanlp/breeze_2.12/0.13/breeze_2.12-0.13.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -27,6 +31,7 @@ data components for the mvn-breeze_2.12 package.
 
 
 %prep
+%setup -q -n META-INF
 
 %build
 
@@ -40,8 +45,20 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze-mac
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze-macros_2.12/0.13.2
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze-macros_2.12/0.13.2/breeze-macros_2.12-0.13.2.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze-macros_2.12/0.13
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze-macros_2.12/0.13/breeze-macros_2.12-0.13.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze-macros_2.12/0.13
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze-macros_2.12/0.13/breeze-macros_2.12-0.13.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13.2
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13.2/breeze_2.12-0.13.2.pom
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13.2/breeze_2.12-0.13.2.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13/breeze_2.12-0.13.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13/breeze_2.12-0.13.pom
 
 
 %files
@@ -51,5 +68,9 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/scalanlp/breeze_2.1
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/scalanlp/breeze-macros_2.12/0.13.2/breeze-macros_2.12-0.13.2.jar
 /usr/share/java/.m2/repository/org/scalanlp/breeze-macros_2.12/0.13.2/breeze-macros_2.12-0.13.2.pom
+/usr/share/java/.m2/repository/org/scalanlp/breeze-macros_2.12/0.13/breeze-macros_2.12-0.13.jar
+/usr/share/java/.m2/repository/org/scalanlp/breeze-macros_2.12/0.13/breeze-macros_2.12-0.13.pom
 /usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13.2/breeze_2.12-0.13.2.jar
 /usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13.2/breeze_2.12-0.13.2.pom
+/usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13/breeze_2.12-0.13.jar
+/usr/share/java/.m2/repository/org/scalanlp/breeze_2.12/0.13/breeze_2.12-0.13.pom
